@@ -456,10 +456,11 @@ object Test {
             stop = true
         }
       }
-      if (res == null) {
+      val res2 = res
+      if (res2 == null) {
         if (isExhausted) Result(Exhausted, n, d, fm)
         else Result(Passed, n, d, fm)
-      } else res
+      } else res2
     }
 
     val t0 = System.nanoTime()
